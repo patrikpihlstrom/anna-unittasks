@@ -11,5 +11,5 @@ setuptools.setup(
 	description='anna task package for unittesting',
 	long_description=description,
 	long_description_content_type='text/markdown',
-	packages=['anna_unittasks', 'anna_unittasks.test', 'anna_unittasks.test.iframe', 'anna_unittasks.test.required']
+	packages=['anna_unittasks', 'anna_unittasks', 'anna_unittasks.iframe', 'anna_unittasks.required']
 )
