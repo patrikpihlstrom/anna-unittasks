@@ -1,0 +1,4 @@
+*.pyc
+anna_unittasks.egg-info
+dist
+.idea
