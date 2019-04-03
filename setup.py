@@ -4,7 +4,7 @@ description = "### anna tasks package"
 
 setuptools.setup(
 	name='anna_unittasks',
-	version='1.0.0',
+	version='1.0.1',
 	author='Patrik Pihlstrom',
 	author_email='patrik.pihlstrom@gmail.com',
 	url='https://github.com/patrikpihlstrom/anna-unittasks',
