@@ -5,6 +5,7 @@ sequence = (
 	"click",
 	"hover",
 	"wait",
+	"select",
 	"switch_to",
 	"iframe.send_keys",
 	"iframe.submit",
