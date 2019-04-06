@@ -7,4 +7,5 @@ class Submit(AbstractTask):
 		events.submit(self.driver, {'target': '#test-submit'})
 
 	def after_execute(self):
-		assertions.element_exists(self.driver, {'target': '.submitted'})
+		self.result.append(assertions.element_exists(self.driver, {'target': '.submitted'}))
+		super().after_execute()

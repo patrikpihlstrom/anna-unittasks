@@ -3,9 +3,6 @@ from anna_lib.abstract_task import AbstractTask
 
 
 class CurrentUrl(AbstractTask):
-	def before_execute(self):
-		super().before_execute()
-
 	def execute(self):
 		events.click(self.driver, {'target': '#test-current-url'})
 

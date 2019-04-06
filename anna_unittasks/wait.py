@@ -8,4 +8,5 @@ class Wait(AbstractTask):
 		events.wait(self.driver, {'target': '#test-wait-get'})
 
 	def after_execute(self):
-		assertions.element_exists(self.driver, {'target': '#test-wait-get'})
+		self.result.append(assertions.element_exists(self.driver, {'target': '#test-wait-get'}))
+		super().after_execute()
