@@ -11,5 +11,6 @@ setuptools.setup(
 	description='anna task package for unittesting',
 	long_description=description,
 	long_description_content_type='text/markdown',
+	install_requires=['anna-lib'],
 	packages=['anna_unittasks', 'anna_unittasks', 'anna_unittasks.iframe', 'anna_unittasks.required']
 )

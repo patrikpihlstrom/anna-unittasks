@@ -1,16 +1,15 @@
-events = [
-	{
-		"type": "click",
-		"target": "#test-current-url"
-	}
-]
-assertions = [
-	{
-		"type": "current_url",
-		"is": "http://annahub.se:8000/test/switchto"
-	},
-	{
-		"type": "current_url",
-		"in": "test/switchto"
-	}
-]
+from anna_lib.selenium import assertions, events
+from anna_lib.abstract_task import AbstractTask
+
+
+class CurrentUrl(AbstractTask):
+	def before_execute(self):
+		super().before_execute()
+
+	def execute(self):
+		events.click(self.driver, {'target': '#test-current-url'})
+
+	def after_execute(self):
+		self.result.append(assertions.current_url(self.driver, {'in': 'test/switchto'}))
+		self.result.append(assertions.current_url(self.driver, {'is': 'http://annahub.se:8000/test/switchto'}))
+		super().after_execute()
