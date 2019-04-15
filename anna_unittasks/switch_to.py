@@ -1,10 +1,10 @@
 from anna_lib.selenium import events
-from anna_lib.abstract_task import AbstractTask
+from anna_lib.task.abstract_task import AbstractTask
 
 
 class SwitchTo(AbstractTask):
-	def execute(self):
-		events.switch_to(self.driver, {'target': '#test-switch-to'})
+	def __execute__(self):
+		events.switch_to(self.driver, '#test-switch-to')
 
 	def after_execute(self):
-		super().after_execute()
+		pass
