@@ -7,5 +7,4 @@ class CurrentUrl(AbstractTask):
 		events.click(self.driver, '#test-current-url')
 
 	def after_execute(self):
-		self.assert_url_equals('http://annahub.se:8000/test/switchto')
 		self.assert_in_url('test/switchto')

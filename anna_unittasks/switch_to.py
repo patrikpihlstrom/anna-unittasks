@@ -7,4 +7,4 @@ class SwitchTo(AbstractTask):
 		events.switch_to(self.driver, '#test-switch-to')
 
 	def after_execute(self):
-		pass
+		self.results.append({'passed': True})

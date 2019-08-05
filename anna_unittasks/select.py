@@ -7,4 +7,4 @@ class Select(AbstractTask):
 		events.click(self.driver, '$xpath//select[@name="xpath"]/option[@value="option"]')
 
 	def after_execute(self):
-		pass
+		self.results.append({'passed': True})
