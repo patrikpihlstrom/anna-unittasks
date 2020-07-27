@@ -1,4 +1,4 @@
-url = "https://test.annahub.se/test"
+url = "https://test.annahub.dev/"
 sequence = (
 	"send_keys",
 	"submit",
