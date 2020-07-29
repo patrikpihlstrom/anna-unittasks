@@ -2,6 +2,9 @@ from anna_lib.task.abstract_task import AbstractTask
 
 
 class Wait(AbstractTask):
+	def before_execute(self):
+		self.timeout = 5
+
 	def __execute__(self):
 		self.scroll_to('#iframe-test-wait')
 		self.click('#iframe-test-wait')
